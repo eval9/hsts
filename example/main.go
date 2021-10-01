@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/a-h/hsts"
+	"hsts"
 )
 
 var serveHTTPSFlag = flag.Bool("serveHTTPS", false, "Whether the system should serve SSL using the example certificate.")
