@@ -27,9 +27,9 @@ type Handler struct {
 func NewHandler(next http.Handler) *Handler {
 	return &Handler{
 		next:   next,
-		MaxAge: time.Hour * 24 * 126, // 126 days (minimum for inclusion in the Chrome HSTS list)
+		MaxAge: time.Hour * 24 * 356, // 126 days (minimum for inclusion in the Chrome HSTS list) // am changed it  to full year
 		AcceptXForwardedProtoHeader: true,
-		SendPreloadDirective:        false,
+		SendPreloadDirective:        true, // changed it to true
 	}
 }
 
